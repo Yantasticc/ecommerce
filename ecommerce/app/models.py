@@ -22,5 +22,5 @@ class Product (models.Model):
     prodapp = models. TextField(default='')
     category = models.CharField(choices=CATEGORY_CHOICES, max_length=2)  # dropdown menu
     product_image = models. ImageField(upload_to='product')
-    def _str_(self):
+    def __str__(self):
         return self.title
